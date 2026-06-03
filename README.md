@@ -11,7 +11,7 @@ This project builds and evaluates two credit-risk models on the [Give Me Some Cr
 * **Source:** Give Me Some Credit (Kaggle), file `cs-training.csv`
 * **Size:** 150,000 records, 11 predictors
 * **Target:** `SeriousDlqin2yrs`, where 1 indicates serious delinquency within two years
-* **Class balance:** approximately 6.7% positive (default), a meaningful imbalance that is handled explicitly
+* **Class balance:** approximately 6.7% positive (default), an imbalance handled explicitly
 
 The raw dataset is not included in this repository. To run the notebook, download the data from the Kaggle competition page and place `cs-training.csv` in the project folder.
 
