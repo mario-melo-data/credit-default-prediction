@@ -30,10 +30,12 @@ The notebook follows a full modelling pipeline:
 
 ## Results
 
-| Model | ROC-AUC (test) |
-|---|---|
-| Random Forest | 0.863 |
-| Logistic Regression | 0.856 |
+| Model | ROC-AUC (test) | PR-AUC (test) |
+|---|---|---|
+| Random Forest | 0.863 | 0.391 |
+| Logistic Regression | 0.856 | 0.346 |
+
+PR-AUC is reported alongside ROC-AUC because defaulters are only 6.7% of borrowers; a random ranking would score about 0.067.
 
 * **Calibration.** Five-fold isotonic calibration reduced the test Brier score from 0.123 to 0.049. For context, a constant prediction of the 6.7% default rate would score about 0.06.
 * **Cost-sensitive thresholding (illustrative).** Under an assumed 10:1 false-negative to false-positive cost ratio, the lowest tested threshold of 0.10 reduced false negatives from 2,526 to 902, while false positives rose from 306 to 6,043. The threshold was chosen using test-set labels at the edge of the searched range (the theoretical optimum for calibrated probabilities is 1/11, about 0.09), and the result is an exploratory trade-off rather than a deployable decision rule.
